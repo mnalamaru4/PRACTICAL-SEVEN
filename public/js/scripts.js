@@ -37,7 +37,7 @@ const submitForm = () => {
     let formData = {};
     formData.title = $('#title').val();
     formData.image = $('#image').val();
-    formData.password = $('#password').val();
+    // formData.password = $('#password').val();
     formData.link = $('#link').val();
     formData.desciption = $('#description').val();
 
