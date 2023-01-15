@@ -3,10 +3,10 @@ let projectCollection;
 
 
 setTimeout(() => {
-    projectCollection = client.mongoClient.db().collection("project");
+    projectCollection = client.db().collection("projects");
     },2000)
 
-    function insertProjects(project, callback) {
+    const insertProjects = (project, callback) => {
     projectCollection.insert(project, callback);
 }
 
@@ -15,6 +15,6 @@ setTimeout(() => {
         projectCollection.find({}). toArray(callback);
     }
 
-    module.exports = {
+    module.exports ={
         insertProjects, getProjects
     }
