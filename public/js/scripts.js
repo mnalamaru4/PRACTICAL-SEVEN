@@ -1,11 +1,11 @@
-// const cardList = [
+const cardList = [
 
 //     {
 
 //         title: "DANE",
 //         image: "images/dane.jpg",
 //         link: "About DANE",
-//         desciption: "Demo desciption about kitten 2"
+//         desciption: "Demo desciption about DANE"
 
 //     },
 //     {
@@ -17,7 +17,7 @@
 
 //     }
 
-// ]
+]
 
 const getProjects = () => {
     $.get('/api/projects',(response) =>{
@@ -75,6 +75,7 @@ $(document).ready(function(){
     $('#formSubmit').click(()=>{
         submitForm();
     })
-    addCards(cardList);
+    // addCards(cardList);
+    getProjects();
     $('.modal').modal();
   });

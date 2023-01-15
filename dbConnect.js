@@ -4,7 +4,7 @@ const MongoClient = require('mongodb'). MongoClient;
 const uri = 'mongodb+srv://Mahidhar:9989@cluster0.iu84sbl.mongodb.net/?retryWrites=true&w=majority'
 const client = new MongoClient(uri, {useNewUrlParser: true})
 
-client.connect((err,db) => {
+client.connect ((err,db) => {
     if(!err) {
         console.log('MongoDB Connected')
     }
@@ -13,4 +13,4 @@ client.connect((err,db) => {
         process.exit(1);
     }
 })
-module.MangoClient = client;
+module.exports = client;
